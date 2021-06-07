@@ -1,0 +1,96 @@
+/* the heading designing */
+.section-title{
+    
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 0px;
+  margin-top: 30px;
+  position: relative;
+  font-size: 26px;
+  padding-bottom: 20px;
+  color: #111111;
+}
+.section-title::before{
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: #111111;
+    bottom: 0;
+    left: calc(50% - 40px);
+}
+.section-title::after{
+   content: "";
+   position: absolute;
+   width: 16px;
+   height: 10px;
+   background-color: #48dbfb;
+   border: 4px solid white;
+   left: calc(50% - 12px);
+   bottom: -7px;
+}
+
+
+.container{
+    position: relative;
+    margin-top: 80px;
+    margin: 40px;
+    width: 90%;
+  }
+  /* designing the inputs */
+.name,.email,#msg{
+  position: relative;
+  display: block;
+  width: 100%;
+  background-color: #353b48;
+  padding: 15px 10px;
+  border-radius: 5px;
+  color: #fff;
+  margin:10px;
+}
+  
+.submit{
+  width: 30%;
+  height: 50px;
+  float: right;
+  background-color: #e76554;
+  color: #fff;
+  border: 2px solid #e76554;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: .3s linear;
+  font-weight: bold;
+  margin: 15px;
+  }
+  .contact-form .submit:hover{
+  border: 2px solid #111;
+  }
+/* :focus detects the clicks,
+if the user will click on the input ,
+the input will get highlighted */
+
+.name:focus,.email:focus,#msg:focus{
+  border-bottom: 3px solid #48dbfb;
+  border-left:3px solid #48dbfb;
+}
+/* ::placeholder is used to customize the placeholder text */
+
+::placeholder{
+  color : grey;
+  font-weight: 200;
+}
+
+/* making the code responsive */
+
+
+@media screen and (max-width:600px){
+  .container{
+    margin: 0px;
+    margin-top: 50px;
+    width : 100%;
+  }
+  .submit{
+    width : 80%;
+    margin: 0px;
+  }
+}
